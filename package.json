@@ -10,8 +10,10 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "commit": "cz",
     "clean": "rm -rf .next",
+    "hard-reset:yarn": "yarn clean && rm -rf node_modules yarn.lock && yarn install",
+    "hard-reset:npm": "npm run clean && rm -rf node_modules package-lock.json && npm install",
+    "commit": "cz",
     "lint:eslint": "eslint */**/*.{js,ts,tsx} --quiet --fix",
     "lint:prettier": "prettier --write .",
     "lint": "npm run lint:eslint && npm run lint:prettier",
