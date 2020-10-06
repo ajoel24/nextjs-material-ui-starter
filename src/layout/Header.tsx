@@ -1,10 +1,8 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import createStyles from '@material-ui/core/styles/createStyles';
-import lightBlue from '@material-ui/core/colors/lightBlue';
+import { makeStyles, Theme, createStyles } from '@material-ui/core';
+import { lightBlue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: lightBlue['300'],
       color: theme.palette.common.white,
     },
-  })
+  }),
 );
 
 const Header: React.FC = () => {

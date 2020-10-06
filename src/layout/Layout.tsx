@@ -1,14 +1,12 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import createStyles from '@material-ui/core/styles/createStyles';
+import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
 import Header from './Header';
 import Footer from './Footer';
 
 type Props = {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -26,20 +24,20 @@ const useStyles = makeStyles((theme: Theme) =>
       flex: '1 0 auto',
       marginTop: theme.spacing(2),
     },
-  })
+  }),
 );
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children }: Props) => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <>
       <Box className={classes.root}>
         <Header />
         <main className={classes.main}>{children}</main>
         <Footer />
       </Box>
-    </React.Fragment>
+    </>
   );
 };
 

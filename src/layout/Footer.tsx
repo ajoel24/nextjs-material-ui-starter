@@ -1,9 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import createStyles from '@material-ui/core/styles/createStyles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,7 +14,19 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'center',
     },
-  })
+  }),
+);
+
+const FooterText: React.FC = () => (
+  <Box>
+    <Typography variant="h6">
+      <span>
+        &copy;
+        {new Date().getUTCFullYear()}
+      </span>
+      . All rights reserved.
+    </Typography>
+  </Box>
 );
 
 const Footer: React.FC = () => {
@@ -25,7 +35,7 @@ const Footer: React.FC = () => {
   return (
     <Box className={classes.root}>
       <Typography variant="h5">
-        &copy; {new Date().getUTCFullYear()}. All rights reserved
+        <FooterText />
       </Typography>
     </Box>
   );
