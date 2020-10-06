@@ -1,6 +1,7 @@
 ## NextJS MaterialUI Starter
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+![ts](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 
 Get up and running with a complete Next.js site developed using Material UI and TypeScript.
 
@@ -11,7 +12,8 @@ Get up and running with a complete Next.js site developed using Material UI and 
 1. [Installation](#installation)
 2. [Main libraries used](#main-libraries-used)
 3. [Usage](#usage)
-4. [Contributing Guidelines](#contributing-guidelines)
+4. [Features](#features)
+5. [Contributing Guidelines](#contributing-guidelines)
 
 <hr>
 
@@ -108,6 +110,13 @@ yarn clean
 ```
 
 <hr>
+
+### Features
+
+- Added `_app.tsx` and `_document.tsx` pages to support Material UI.
+- Basic rules in ESLint and Prettier.
+- A `Layout` component for wrapping pages.
+- A `SEO` component for adding title and description for pages.
 
 ### Contributing Guidelines
 
